@@ -1,0 +1,7 @@
+dist/
+docs/
+node_modules
+tmp
+*.log
+.DS_STORE
+.vagrant/
