@@ -1,6 +1,7 @@
 import * as grpc from '@grpc/grpc-js'
 import {ListContainersResponse__Output} from './proto/containerd/services/containers/v1/ListContainersResponse'
 import {containersService, introspectionService} from './services'
+import {ContainersService} from './services/ContainersService'
 import {promisify} from './util'
 
 function memoize<T>(init: () => Promise<T>): () => Promise<T> {
@@ -16,15 +17,22 @@ function memoize<T>(init: () => Promise<T>): () => Promise<T> {
 class Client {
   #address: string
   #namespace: string
+  #credentials = grpc.credentials.createInsecure()
+  #clientOptions: grpc.ClientOptions = {
+    callInvocationTransformer: (callProperties) => {
+      callProperties.metadata.set('containerd-namespace', this.#namespace)
+      return callProperties
+    },
+  }
 
   #containersService = memoize(async () => {
     const service = await containersService()
-    return new service.Containers(this.#address, grpc.credentials.createInsecure())
+    return new service.Containers(this.#address, this.#credentials, this.#clientOptions)
   })
 
   #introspectionService = memoize(async () => {
     const service = await introspectionService()
-    return new service.Introspection(this.#address, grpc.credentials.createInsecure())
+    return new service.Introspection(this.#address, this.#credentials, this.#clientOptions)
   })
 
   constructor(address: string, namespace: string) {
@@ -34,19 +42,15 @@ class Client {
 
   async containersList() {
     const svc = await this.#containersService()
-    const metadata = new grpc.Metadata()
-    metadata.set('containerd-namespace', this.#namespace)
     return promisify<ListContainersResponse__Output>((handler) => {
-      svc.list({}, metadata, handler)
+      svc.list({}, handler)
     })
   }
 
   async introspectionServer() {
     const svc = await this.#introspectionService()
-    const metadata = new grpc.Metadata()
-    metadata.set('namespace', this.#namespace)
     return new Promise((resolve, reject) => {
-      svc.server({}, metadata, (err, result) => {
+      svc.server({}, (err, result) => {
         if (err) {
           reject(err)
         } else {
@@ -73,11 +77,8 @@ async function run() {
   const metadata = new grpc.Metadata()
   metadata.set('containerd-namespace', 'example')
 
-  const client = await createClient()
-  client.list({}, metadata, (error, result) => {
-    console.log({error, result})
-    console.log(result)
-  })
+  const client = new ContainersService('unix:/run/containerd/containerd.sock', 'example')
+  console.log(await client.list({}))
 
   const c = new Client('unix:/run/containerd/containerd.sock', 'example')
   console.log(await c.containersList())
