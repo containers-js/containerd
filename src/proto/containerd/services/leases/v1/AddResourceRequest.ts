@@ -11,6 +11,6 @@ export interface AddResourceRequest {
 }
 
 export interface AddResourceRequest__Output {
-  id?: string
-  resource?: _containerd_services_leases_v1_Resource__Output
+  id: string
+  resource: _containerd_services_leases_v1_Resource__Output | null
 }

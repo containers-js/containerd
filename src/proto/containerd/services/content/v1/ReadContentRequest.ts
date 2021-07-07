@@ -9,7 +9,7 @@ export interface ReadContentRequest {
 }
 
 export interface ReadContentRequest__Output {
-  digest?: string
-  offset?: Long
-  size?: Long
+  digest: string
+  offset: Long
+  size: Long
 }

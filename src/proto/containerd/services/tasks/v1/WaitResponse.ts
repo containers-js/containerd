@@ -11,6 +11,6 @@ export interface WaitResponse {
 }
 
 export interface WaitResponse__Output {
-  exitStatus?: number
-  exitedAt?: _google_protobuf_Timestamp__Output
+  exitStatus: number
+  exitedAt: _google_protobuf_Timestamp__Output | null
 }

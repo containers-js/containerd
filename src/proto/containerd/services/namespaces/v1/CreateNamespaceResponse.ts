@@ -10,5 +10,5 @@ export interface CreateNamespaceResponse {
 }
 
 export interface CreateNamespaceResponse__Output {
-  namespace?: _containerd_services_namespaces_v1_Namespace__Output
+  namespace: _containerd_services_namespaces_v1_Namespace__Output | null
 }

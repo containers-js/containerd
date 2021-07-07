@@ -17,8 +17,8 @@ export interface Envelope {
 }
 
 export interface Envelope__Output {
-  timestamp?: _google_protobuf_Timestamp__Output
-  namespace?: string
-  topic?: string
-  event?: _google_protobuf_Any__Output
+  timestamp: _google_protobuf_Timestamp__Output | null
+  namespace: string
+  topic: string
+  event: _google_protobuf_Any__Output | null
 }

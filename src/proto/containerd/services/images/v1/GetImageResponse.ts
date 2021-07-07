@@ -10,5 +10,5 @@ export interface GetImageResponse {
 }
 
 export interface GetImageResponse__Output {
-  image?: _containerd_services_images_v1_Image__Output
+  image: _containerd_services_images_v1_Image__Output | null
 }

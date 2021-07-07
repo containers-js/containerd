@@ -15,10 +15,10 @@ export interface MethodDescriptorProto {
 }
 
 export interface MethodDescriptorProto__Output {
-  name?: string
-  inputType?: string
-  outputType?: string
-  options?: _google_protobuf_MethodOptions__Output
-  clientStreaming?: boolean
-  serverStreaming?: boolean
+  name: string
+  inputType: string
+  outputType: string
+  options: _google_protobuf_MethodOptions__Output | null
+  clientStreaming: boolean
+  serverStreaming: boolean
 }

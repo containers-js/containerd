@@ -6,6 +6,6 @@ export interface RemoveSnapshotRequest {
 }
 
 export interface RemoveSnapshotRequest__Output {
-  snapshotter?: string
-  key?: string
+  snapshotter: string
+  key: string
 }

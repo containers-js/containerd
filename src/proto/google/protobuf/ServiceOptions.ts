@@ -11,6 +11,6 @@ export interface ServiceOptions {
 }
 
 export interface ServiceOptions__Output {
-  deprecated?: boolean
-  uninterpretedOption?: _google_protobuf_UninterpretedOption__Output[]
+  deprecated: boolean
+  uninterpretedOption: _google_protobuf_UninterpretedOption__Output[]
 }

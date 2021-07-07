@@ -10,5 +10,5 @@ export interface ListContentResponse {
 }
 
 export interface ListContentResponse__Output {
-  info?: _containerd_services_content_v1_Info__Output[]
+  info: _containerd_services_content_v1_Info__Output[]
 }

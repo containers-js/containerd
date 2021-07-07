@@ -15,6 +15,6 @@ export interface UpdateNamespaceRequest {
 }
 
 export interface UpdateNamespaceRequest__Output {
-  namespace?: _containerd_services_namespaces_v1_Namespace__Output
-  updateMask?: _google_protobuf_FieldMask__Output
+  namespace: _containerd_services_namespaces_v1_Namespace__Output | null
+  updateMask: _google_protobuf_FieldMask__Output | null
 }

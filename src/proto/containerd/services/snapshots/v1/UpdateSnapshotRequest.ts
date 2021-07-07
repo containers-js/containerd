@@ -16,7 +16,7 @@ export interface UpdateSnapshotRequest {
 }
 
 export interface UpdateSnapshotRequest__Output {
-  snapshotter?: string
-  info?: _containerd_services_snapshots_v1_Info__Output
-  updateMask?: _google_protobuf_FieldMask__Output
+  snapshotter: string
+  info: _containerd_services_snapshots_v1_Info__Output | null
+  updateMask: _google_protobuf_FieldMask__Output | null
 }

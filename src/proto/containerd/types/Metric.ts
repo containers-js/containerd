@@ -13,7 +13,7 @@ export interface Metric {
 }
 
 export interface Metric__Output {
-  timestamp?: _google_protobuf_Timestamp__Output
-  id?: string
-  data?: _google_protobuf_Any__Output
+  timestamp: _google_protobuf_Timestamp__Output | null
+  id: string
+  data: _google_protobuf_Any__Output | null
 }

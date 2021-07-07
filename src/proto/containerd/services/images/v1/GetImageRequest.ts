@@ -5,5 +5,5 @@ export interface GetImageRequest {
 }
 
 export interface GetImageRequest__Output {
-  name?: string
+  name: string
 }

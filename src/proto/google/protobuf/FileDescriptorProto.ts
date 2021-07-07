@@ -41,16 +41,16 @@ export interface FileDescriptorProto {
 }
 
 export interface FileDescriptorProto__Output {
-  name?: string
-  package?: string
-  dependency?: string[]
-  messageType?: _google_protobuf_DescriptorProto__Output[]
-  enumType?: _google_protobuf_EnumDescriptorProto__Output[]
-  service?: _google_protobuf_ServiceDescriptorProto__Output[]
-  extension?: _google_protobuf_FieldDescriptorProto__Output[]
-  options?: _google_protobuf_FileOptions__Output
-  sourceCodeInfo?: _google_protobuf_SourceCodeInfo__Output
-  publicDependency?: number[]
-  weakDependency?: number[]
-  syntax?: string
+  name: string
+  package: string
+  dependency: string[]
+  messageType: _google_protobuf_DescriptorProto__Output[]
+  enumType: _google_protobuf_EnumDescriptorProto__Output[]
+  service: _google_protobuf_ServiceDescriptorProto__Output[]
+  extension: _google_protobuf_FieldDescriptorProto__Output[]
+  options: _google_protobuf_FileOptions__Output | null
+  sourceCodeInfo: _google_protobuf_SourceCodeInfo__Output | null
+  publicDependency: number[]
+  weakDependency: number[]
+  syntax: string
 }

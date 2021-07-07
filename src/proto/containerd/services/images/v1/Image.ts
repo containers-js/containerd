@@ -18,9 +18,9 @@ export interface Image {
 }
 
 export interface Image__Output {
-  name?: string
-  labels?: {[key: string]: string}
-  target?: _containerd_types_Descriptor__Output
-  createdAt?: _google_protobuf_Timestamp__Output
-  updatedAt?: _google_protobuf_Timestamp__Output
+  name: string
+  labels: {[key: string]: string}
+  target: _containerd_types_Descriptor__Output | null
+  createdAt: _google_protobuf_Timestamp__Output | null
+  updatedAt: _google_protobuf_Timestamp__Output | null
 }

@@ -10,5 +10,5 @@ export interface DiffResponse {
 }
 
 export interface DiffResponse__Output {
-  diff?: _containerd_types_Descriptor__Output
+  diff: _containerd_types_Descriptor__Output | null
 }

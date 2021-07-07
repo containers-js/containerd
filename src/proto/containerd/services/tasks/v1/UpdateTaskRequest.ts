@@ -12,7 +12,7 @@ export interface UpdateTaskRequest {
 }
 
 export interface UpdateTaskRequest__Output {
-  containerId?: string
-  resources?: _google_protobuf_Any__Output
-  annotations?: {[key: string]: string}
+  containerId: string
+  resources: _google_protobuf_Any__Output | null
+  annotations: {[key: string]: string}
 }

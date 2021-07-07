@@ -7,7 +7,7 @@ export interface Platform {
 }
 
 export interface Platform__Output {
-  os?: string
-  architecture?: string
-  variant?: string
+  os: string
+  architecture: string
+  variant: string
 }

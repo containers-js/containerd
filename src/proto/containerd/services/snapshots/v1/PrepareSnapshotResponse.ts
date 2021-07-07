@@ -10,5 +10,5 @@ export interface PrepareSnapshotResponse {
 }
 
 export interface PrepareSnapshotResponse__Output {
-  mounts?: _containerd_types_Mount__Output[]
+  mounts: _containerd_types_Mount__Output[]
 }

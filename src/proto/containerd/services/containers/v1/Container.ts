@@ -15,8 +15,8 @@ export interface _containerd_services_containers_v1_Container_Runtime {
 }
 
 export interface _containerd_services_containers_v1_Container_Runtime__Output {
-  name?: string
-  options?: _google_protobuf_Any__Output
+  name: string
+  options: _google_protobuf_Any__Output | null
 }
 
 export interface Container {
@@ -33,14 +33,14 @@ export interface Container {
 }
 
 export interface Container__Output {
-  id?: string
-  labels?: {[key: string]: string}
-  image?: string
-  runtime?: _containerd_services_containers_v1_Container_Runtime__Output
-  spec?: _google_protobuf_Any__Output
-  snapshotter?: string
-  snapshotKey?: string
-  createdAt?: _google_protobuf_Timestamp__Output
-  updatedAt?: _google_protobuf_Timestamp__Output
-  extensions?: {[key: string]: _google_protobuf_Any__Output}
+  id: string
+  labels: {[key: string]: string}
+  image: string
+  runtime: _containerd_services_containers_v1_Container_Runtime__Output | null
+  spec: _google_protobuf_Any__Output | null
+  snapshotter: string
+  snapshotKey: string
+  createdAt: _google_protobuf_Timestamp__Output | null
+  updatedAt: _google_protobuf_Timestamp__Output | null
+  extensions: {[key: string]: _google_protobuf_Any__Output}
 }

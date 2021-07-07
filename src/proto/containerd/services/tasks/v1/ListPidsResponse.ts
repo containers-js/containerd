@@ -10,5 +10,5 @@ export interface ListPidsResponse {
 }
 
 export interface ListPidsResponse__Output {
-  processes?: _containerd_v1_types_ProcessInfo__Output[]
+  processes: _containerd_v1_types_ProcessInfo__Output[]
 }

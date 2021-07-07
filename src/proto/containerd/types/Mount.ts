@@ -8,8 +8,8 @@ export interface Mount {
 }
 
 export interface Mount__Output {
-  type?: string
-  source?: string
-  target?: string
-  options?: string[]
+  type: string
+  source: string
+  target: string
+  options: string[]
 }

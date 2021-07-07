@@ -6,6 +6,6 @@ export interface ListSnapshotsRequest {
 }
 
 export interface ListSnapshotsRequest__Output {
-  snapshotter?: string
-  filters?: string[]
+  snapshotter: string
+  filters: string[]
 }

@@ -6,6 +6,6 @@ export interface CreateRequest {
 }
 
 export interface CreateRequest__Output {
-  id?: string
-  labels?: {[key: string]: string}
+  id: string
+  labels: {[key: string]: string}
 }

@@ -10,5 +10,5 @@ export interface CheckpointTaskResponse {
 }
 
 export interface CheckpointTaskResponse__Output {
-  descriptors?: _containerd_types_Descriptor__Output[]
+  descriptors: _containerd_types_Descriptor__Output[]
 }

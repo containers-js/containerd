@@ -14,11 +14,11 @@ export interface WriteContentRequest {
 }
 
 export interface WriteContentRequest__Output {
-  action?: _containerd_services_content_v1_WriteAction
-  ref?: string
-  total?: Long
-  expected?: string
-  offset?: Long
-  data?: Buffer
-  labels?: {[key: string]: string}
+  action: _containerd_services_content_v1_WriteAction
+  ref: string
+  total: Long
+  expected: string
+  offset: Long
+  data: Buffer
+  labels: {[key: string]: string}
 }

@@ -6,6 +6,6 @@ export interface DeleteProcessRequest {
 }
 
 export interface DeleteProcessRequest__Output {
-  containerId?: string
-  execId?: string
+  containerId: string
+  execId: string
 }

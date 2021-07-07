@@ -5,5 +5,5 @@ export interface StartResponse {
 }
 
 export interface StartResponse__Output {
-  pid?: number
+  pid: number
 }

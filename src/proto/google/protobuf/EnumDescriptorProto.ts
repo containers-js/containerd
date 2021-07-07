@@ -16,7 +16,7 @@ export interface EnumDescriptorProto {
 }
 
 export interface EnumDescriptorProto__Output {
-  name?: string
-  value?: _google_protobuf_EnumValueDescriptorProto__Output[]
-  options?: _google_protobuf_EnumOptions__Output
+  name: string
+  value: _google_protobuf_EnumValueDescriptorProto__Output[]
+  options: _google_protobuf_EnumOptions__Output | null
 }

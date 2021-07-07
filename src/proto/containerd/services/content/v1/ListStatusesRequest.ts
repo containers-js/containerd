@@ -5,5 +5,5 @@ export interface ListStatusesRequest {
 }
 
 export interface ListStatusesRequest__Output {
-  filters?: string[]
+  filters: string[]
 }

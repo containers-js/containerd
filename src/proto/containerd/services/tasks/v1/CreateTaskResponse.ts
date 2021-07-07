@@ -6,6 +6,6 @@ export interface CreateTaskResponse {
 }
 
 export interface CreateTaskResponse__Output {
-  containerId?: string
-  pid?: number
+  containerId: string
+  pid: number
 }

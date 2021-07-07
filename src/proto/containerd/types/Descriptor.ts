@@ -10,8 +10,8 @@ export interface Descriptor {
 }
 
 export interface Descriptor__Output {
-  mediaType?: string
-  digest?: string
-  size?: Long
-  annotations?: {[key: string]: string}
+  mediaType: string
+  digest: string
+  size: Long
+  annotations: {[key: string]: string}
 }

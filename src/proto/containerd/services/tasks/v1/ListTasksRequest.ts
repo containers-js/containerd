@@ -5,5 +5,5 @@ export interface ListTasksRequest {
 }
 
 export interface ListTasksRequest__Output {
-  filter?: string
+  filter: string
 }

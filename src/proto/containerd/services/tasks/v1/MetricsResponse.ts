@@ -10,5 +10,5 @@ export interface MetricsResponse {
 }
 
 export interface MetricsResponse__Output {
-  metrics?: _containerd_types_Metric__Output[]
+  metrics: _containerd_types_Metric__Output[]
 }

@@ -5,5 +5,5 @@ export interface ResumeTaskRequest {
 }
 
 export interface ResumeTaskRequest__Output {
-  containerId?: string
+  containerId: string
 }

@@ -12,7 +12,7 @@ export interface EnumValueDescriptorProto {
 }
 
 export interface EnumValueDescriptorProto__Output {
-  name?: string
-  number?: number
-  options?: _google_protobuf_EnumValueOptions__Output
+  name: string
+  number: number
+  options: _google_protobuf_EnumValueOptions__Output | null
 }

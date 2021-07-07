@@ -10,5 +10,5 @@ export interface GetResponse {
 }
 
 export interface GetResponse__Output {
-  process?: _containerd_v1_types_Process__Output
+  process: _containerd_v1_types_Process__Output | null
 }

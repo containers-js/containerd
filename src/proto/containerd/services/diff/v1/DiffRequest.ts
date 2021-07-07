@@ -14,9 +14,9 @@ export interface DiffRequest {
 }
 
 export interface DiffRequest__Output {
-  left?: _containerd_types_Mount__Output[]
-  right?: _containerd_types_Mount__Output[]
-  mediaType?: string
-  ref?: string
-  labels?: {[key: string]: string}
+  left: _containerd_types_Mount__Output[]
+  right: _containerd_types_Mount__Output[]
+  mediaType: string
+  ref: string
+  labels: {[key: string]: string}
 }

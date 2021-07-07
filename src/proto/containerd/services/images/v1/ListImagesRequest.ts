@@ -5,5 +5,5 @@ export interface ListImagesRequest {
 }
 
 export interface ListImagesRequest__Output {
-  filters?: string[]
+  filters: string[]
 }

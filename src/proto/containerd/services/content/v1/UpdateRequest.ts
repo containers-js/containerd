@@ -15,6 +15,6 @@ export interface UpdateRequest {
 }
 
 export interface UpdateRequest__Output {
-  info?: _containerd_services_content_v1_Info__Output
-  updateMask?: _google_protobuf_FieldMask__Output
+  info: _containerd_services_content_v1_Info__Output | null
+  updateMask: _google_protobuf_FieldMask__Output | null
 }

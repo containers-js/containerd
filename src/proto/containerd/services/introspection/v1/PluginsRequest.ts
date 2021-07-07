@@ -5,5 +5,5 @@ export interface PluginsRequest {
 }
 
 export interface PluginsRequest__Output {
-  filters?: string[]
+  filters: string[]
 }

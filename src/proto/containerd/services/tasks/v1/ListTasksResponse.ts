@@ -10,5 +10,5 @@ export interface ListTasksResponse {
 }
 
 export interface ListTasksResponse__Output {
-  tasks?: _containerd_v1_types_Process__Output[]
+  tasks: _containerd_v1_types_Process__Output[]
 }

@@ -5,5 +5,5 @@ export interface DeleteTaskRequest {
 }
 
 export interface DeleteTaskRequest__Output {
-  containerId?: string
+  containerId: string
 }

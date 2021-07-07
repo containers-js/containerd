@@ -10,5 +10,5 @@ export interface PluginsResponse {
 }
 
 export interface PluginsResponse__Output {
-  plugins?: _containerd_services_introspection_v1_Plugin__Output[]
+  plugins: _containerd_services_introspection_v1_Plugin__Output[]
 }

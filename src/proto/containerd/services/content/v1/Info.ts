@@ -15,9 +15,9 @@ export interface Info {
 }
 
 export interface Info__Output {
-  digest?: string
-  size?: Long
-  createdAt?: _google_protobuf_Timestamp__Output
-  updatedAt?: _google_protobuf_Timestamp__Output
-  labels?: {[key: string]: string}
+  digest: string
+  size: Long
+  createdAt: _google_protobuf_Timestamp__Output | null
+  updatedAt: _google_protobuf_Timestamp__Output | null
+  labels: {[key: string]: string}
 }

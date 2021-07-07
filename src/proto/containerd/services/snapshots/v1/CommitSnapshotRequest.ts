@@ -8,8 +8,8 @@ export interface CommitSnapshotRequest {
 }
 
 export interface CommitSnapshotRequest__Output {
-  snapshotter?: string
-  name?: string
-  key?: string
-  labels?: {[key: string]: string}
+  snapshotter: string
+  name: string
+  key: string
+  labels: {[key: string]: string}
 }

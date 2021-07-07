@@ -20,14 +20,14 @@ export interface Process {
 }
 
 export interface Process__Output {
-  containerId?: string
-  id?: string
-  pid?: number
-  status?: _containerd_v1_types_Status
-  stdin?: string
-  stdout?: string
-  stderr?: string
-  terminal?: boolean
-  exitStatus?: number
-  exitedAt?: _google_protobuf_Timestamp__Output
+  containerId: string
+  id: string
+  pid: number
+  status: _containerd_v1_types_Status
+  stdin: string
+  stdout: string
+  stderr: string
+  terminal: boolean
+  exitStatus: number
+  exitedAt: _google_protobuf_Timestamp__Output | null
 }

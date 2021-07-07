@@ -8,8 +8,8 @@ export interface ResizePtyRequest {
 }
 
 export interface ResizePtyRequest__Output {
-  containerId?: string
-  execId?: string
-  width?: number
-  height?: number
+  containerId: string
+  execId: string
+  width: number
+  height: number
 }

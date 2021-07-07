@@ -5,5 +5,5 @@ export interface GetContainerRequest {
 }
 
 export interface GetContainerRequest__Output {
-  id?: string
+  id: string
 }

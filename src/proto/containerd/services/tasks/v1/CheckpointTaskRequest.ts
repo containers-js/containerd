@@ -12,7 +12,7 @@ export interface CheckpointTaskRequest {
 }
 
 export interface CheckpointTaskRequest__Output {
-  containerId?: string
-  parentCheckpoint?: string
-  options?: _google_protobuf_Any__Output
+  containerId: string
+  parentCheckpoint: string
+  options: _google_protobuf_Any__Output | null
 }

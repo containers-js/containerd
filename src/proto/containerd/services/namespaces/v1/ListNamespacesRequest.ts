@@ -5,5 +5,5 @@ export interface ListNamespacesRequest {
 }
 
 export interface ListNamespacesRequest__Output {
-  filter?: string
+  filter: string
 }

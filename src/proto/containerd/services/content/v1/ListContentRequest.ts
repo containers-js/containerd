@@ -5,5 +5,5 @@ export interface ListContentRequest {
 }
 
 export interface ListContentRequest__Output {
-  filters?: string[]
+  filters: string[]
 }

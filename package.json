@@ -26,7 +26,7 @@
     "clean": "rm -rf dist",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
-    "generate-types": "node generate-types.js > src/types.ts",
+    "generate": "proto-loader-gen-types --grpcLib=@grpc/grpc-js --outDir=src/proto/ --defaults proto/**/*.proto -I=./proto/ && pnpm fmt",
     "type-check": "tsc --noEmit",
     "watch": "rollup -c --watch"
   },

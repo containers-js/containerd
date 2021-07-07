@@ -10,5 +10,5 @@ export interface MountsResponse {
 }
 
 export interface MountsResponse__Output {
-  mounts?: _containerd_types_Mount__Output[]
+  mounts: _containerd_types_Mount__Output[]
 }

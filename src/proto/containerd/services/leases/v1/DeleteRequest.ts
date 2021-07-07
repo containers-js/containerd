@@ -6,6 +6,6 @@ export interface DeleteRequest {
 }
 
 export interface DeleteRequest__Output {
-  id?: string
-  sync?: boolean
+  id: string
+  sync: boolean
 }

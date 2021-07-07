@@ -44,23 +44,23 @@ export interface FieldOptions {
 }
 
 export interface FieldOptions__Output {
-  ctype?: _google_protobuf_FieldOptions_CType
-  packed?: boolean
-  deprecated?: boolean
-  lazy?: boolean
-  jstype?: _google_protobuf_FieldOptions_JSType
-  weak?: boolean
-  uninterpretedOption?: _google_protobuf_UninterpretedOption__Output[]
-  '.gogoproto.nullable'?: boolean
-  '.gogoproto.embed'?: boolean
-  '.gogoproto.customtype'?: string
-  '.gogoproto.customname'?: string
-  '.gogoproto.jsontag'?: string
-  '.gogoproto.moretags'?: string
-  '.gogoproto.casttype'?: string
-  '.gogoproto.castkey'?: string
-  '.gogoproto.castvalue'?: string
-  '.gogoproto.stdtime'?: boolean
-  '.gogoproto.stdduration'?: boolean
-  '.gogoproto.wktpointer'?: boolean
+  ctype: _google_protobuf_FieldOptions_CType
+  packed: boolean
+  deprecated: boolean
+  lazy: boolean
+  jstype: _google_protobuf_FieldOptions_JSType
+  weak: boolean
+  uninterpretedOption: _google_protobuf_UninterpretedOption__Output[]
+  '.gogoproto.nullable': boolean
+  '.gogoproto.embed': boolean
+  '.gogoproto.customtype': string
+  '.gogoproto.customname': string
+  '.gogoproto.jsontag': string
+  '.gogoproto.moretags': string
+  '.gogoproto.casttype': string
+  '.gogoproto.castkey': string
+  '.gogoproto.castvalue': string
+  '.gogoproto.stdtime': boolean
+  '.gogoproto.stdduration': boolean
+  '.gogoproto.wktpointer': boolean
 }

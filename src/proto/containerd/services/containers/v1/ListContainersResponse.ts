@@ -10,5 +10,5 @@ export interface ListContainersResponse {
 }
 
 export interface ListContainersResponse__Output {
-  containers?: _containerd_services_containers_v1_Container__Output[]
+  containers: _containerd_services_containers_v1_Container__Output[]
 }

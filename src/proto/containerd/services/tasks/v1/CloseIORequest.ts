@@ -7,7 +7,7 @@ export interface CloseIORequest {
 }
 
 export interface CloseIORequest__Output {
-  containerId?: string
-  execId?: string
-  stdin?: boolean
+  containerId: string
+  execId: string
+  stdin: boolean
 }

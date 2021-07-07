@@ -43,7 +43,10 @@ export abstract class BaseService<PackageDefinition, Client extends grpc.Client>
 
   protected async packageDefinition(): Promise<PackageDefinition> {
     if (this.#packageDefinition) return this.#packageDefinition as PackageDefinition
-    const proto = await protoLoader.load(this.#protoPath, {includeDirs: [path.join(__dirname, '../../proto')]})
+    const proto = await protoLoader.load(this.#protoPath, {
+      includeDirs: [path.join(__dirname, '../../proto')],
+      defaults: true,
+    })
     const packageDefinition = grpc.loadPackageDefinition(proto) as unknown as PackageDefinition
     this.#packageDefinition = packageDefinition
     return packageDefinition

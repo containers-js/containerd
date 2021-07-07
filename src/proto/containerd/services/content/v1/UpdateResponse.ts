@@ -10,5 +10,5 @@ export interface UpdateResponse {
 }
 
 export interface UpdateResponse__Output {
-  info?: _containerd_services_content_v1_Info__Output
+  info: _containerd_services_content_v1_Info__Output | null
 }

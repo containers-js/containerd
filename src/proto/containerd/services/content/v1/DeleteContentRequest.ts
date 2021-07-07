@@ -5,5 +5,5 @@ export interface DeleteContentRequest {
 }
 
 export interface DeleteContentRequest__Output {
-  digest?: string
+  digest: string
 }

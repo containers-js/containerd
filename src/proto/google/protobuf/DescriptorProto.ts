@@ -27,8 +27,8 @@ export interface _google_protobuf_DescriptorProto_ExtensionRange {
 }
 
 export interface _google_protobuf_DescriptorProto_ExtensionRange__Output {
-  start?: number
-  end?: number
+  start: number
+  end: number
 }
 
 export interface _google_protobuf_DescriptorProto_ReservedRange {
@@ -37,8 +37,8 @@ export interface _google_protobuf_DescriptorProto_ReservedRange {
 }
 
 export interface _google_protobuf_DescriptorProto_ReservedRange__Output {
-  start?: number
-  end?: number
+  start: number
+  end: number
 }
 
 export interface DescriptorProto {
@@ -55,14 +55,14 @@ export interface DescriptorProto {
 }
 
 export interface DescriptorProto__Output {
-  name?: string
-  field?: _google_protobuf_FieldDescriptorProto__Output[]
-  nestedType?: _google_protobuf_DescriptorProto__Output[]
-  enumType?: _google_protobuf_EnumDescriptorProto__Output[]
-  extensionRange?: _google_protobuf_DescriptorProto_ExtensionRange__Output[]
-  extension?: _google_protobuf_FieldDescriptorProto__Output[]
-  options?: _google_protobuf_MessageOptions__Output
-  oneofDecl?: _google_protobuf_OneofDescriptorProto__Output[]
-  reservedRange?: _google_protobuf_DescriptorProto_ReservedRange__Output[]
-  reservedName?: string[]
+  name: string
+  field: _google_protobuf_FieldDescriptorProto__Output[]
+  nestedType: _google_protobuf_DescriptorProto__Output[]
+  enumType: _google_protobuf_EnumDescriptorProto__Output[]
+  extensionRange: _google_protobuf_DescriptorProto_ExtensionRange__Output[]
+  extension: _google_protobuf_FieldDescriptorProto__Output[]
+  options: _google_protobuf_MessageOptions__Output | null
+  oneofDecl: _google_protobuf_OneofDescriptorProto__Output[]
+  reservedRange: _google_protobuf_DescriptorProto_ReservedRange__Output[]
+  reservedName: string[]
 }

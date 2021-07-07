@@ -8,10 +8,10 @@ export interface _google_protobuf_GeneratedCodeInfo_Annotation {
 }
 
 export interface _google_protobuf_GeneratedCodeInfo_Annotation__Output {
-  path?: number[]
-  sourceFile?: string
-  begin?: number
-  end?: number
+  path: number[]
+  sourceFile: string
+  begin: number
+  end: number
 }
 
 export interface GeneratedCodeInfo {
@@ -19,5 +19,5 @@ export interface GeneratedCodeInfo {
 }
 
 export interface GeneratedCodeInfo__Output {
-  annotation?: _google_protobuf_GeneratedCodeInfo_Annotation__Output[]
+  annotation: _google_protobuf_GeneratedCodeInfo_Annotation__Output[]
 }

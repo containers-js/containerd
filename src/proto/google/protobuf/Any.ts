@@ -10,6 +10,6 @@ export type Any =
     }
 
 export interface Any__Output {
-  type_url?: string
-  value?: Buffer
+  type_url: string
+  value: Buffer
 }

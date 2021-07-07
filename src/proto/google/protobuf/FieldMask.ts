@@ -5,5 +5,5 @@ export interface FieldMask {
 }
 
 export interface FieldMask__Output {
-  paths?: string[]
+  paths: string[]
 }

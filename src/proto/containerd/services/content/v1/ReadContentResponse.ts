@@ -8,6 +8,6 @@ export interface ReadContentResponse {
 }
 
 export interface ReadContentResponse__Output {
-  offset?: Long
-  data?: Buffer
+  offset: Long
+  data: Buffer
 }

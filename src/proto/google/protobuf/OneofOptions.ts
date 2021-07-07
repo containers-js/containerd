@@ -10,5 +10,5 @@ export interface OneofOptions {
 }
 
 export interface OneofOptions__Output {
-  uninterpretedOption?: _google_protobuf_UninterpretedOption__Output[]
+  uninterpretedOption: _google_protobuf_UninterpretedOption__Output[]
 }

@@ -6,6 +6,6 @@ export interface DeleteImageRequest {
 }
 
 export interface DeleteImageRequest__Output {
-  name?: string
-  sync?: boolean
+  name: string
+  sync: boolean
 }

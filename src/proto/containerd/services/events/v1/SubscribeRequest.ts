@@ -5,5 +5,5 @@ export interface SubscribeRequest {
 }
 
 export interface SubscribeRequest__Output {
-  filters?: string[]
+  filters: string[]
 }

@@ -5,5 +5,5 @@ export interface ServerResponse {
 }
 
 export interface ServerResponse__Output {
-  uuid?: string
+  uuid: string
 }

@@ -50,14 +50,14 @@ export interface FieldDescriptorProto {
 }
 
 export interface FieldDescriptorProto__Output {
-  name?: string
-  extendee?: string
-  number?: number
-  label?: _google_protobuf_FieldDescriptorProto_Label
-  type?: _google_protobuf_FieldDescriptorProto_Type
-  typeName?: string
-  defaultValue?: string
-  options?: _google_protobuf_FieldOptions__Output
-  oneofIndex?: number
-  jsonName?: string
+  name: string
+  extendee: string
+  number: number
+  label: _google_protobuf_FieldDescriptorProto_Label
+  type: _google_protobuf_FieldDescriptorProto_Type
+  typeName: string
+  defaultValue: string
+  options: _google_protobuf_FieldOptions__Output | null
+  oneofIndex: number
+  jsonName: string
 }

@@ -16,10 +16,10 @@ export interface Status {
 }
 
 export interface Status__Output {
-  startedAt?: _google_protobuf_Timestamp__Output
-  updatedAt?: _google_protobuf_Timestamp__Output
-  ref?: string
-  offset?: Long
-  total?: Long
-  expected?: string
+  startedAt: _google_protobuf_Timestamp__Output | null
+  updatedAt: _google_protobuf_Timestamp__Output | null
+  ref: string
+  offset: Long
+  total: Long
+  expected: string
 }

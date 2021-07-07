@@ -17,10 +17,10 @@ export interface WriteContentResponse {
 }
 
 export interface WriteContentResponse__Output {
-  action?: _containerd_services_content_v1_WriteAction
-  startedAt?: _google_protobuf_Timestamp__Output
-  updatedAt?: _google_protobuf_Timestamp__Output
-  offset?: Long
-  total?: Long
-  digest?: string
+  action: _containerd_services_content_v1_WriteAction
+  startedAt: _google_protobuf_Timestamp__Output | null
+  updatedAt: _google_protobuf_Timestamp__Output | null
+  offset: Long
+  total: Long
+  digest: string
 }

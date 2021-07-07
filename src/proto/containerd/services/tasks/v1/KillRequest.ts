@@ -8,8 +8,8 @@ export interface KillRequest {
 }
 
 export interface KillRequest__Output {
-  containerId?: string
-  execId?: string
-  signal?: number
-  all?: boolean
+  containerId: string
+  execId: string
+  signal: number
+  all: boolean
 }

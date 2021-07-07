@@ -9,7 +9,7 @@ export interface Status {
 }
 
 export interface Status__Output {
-  code?: number
-  message?: string
-  details?: _google_protobuf_Any__Output[]
+  code: number
+  message: string
+  details: _google_protobuf_Any__Output[]
 }

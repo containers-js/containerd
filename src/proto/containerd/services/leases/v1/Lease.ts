@@ -12,7 +12,7 @@ export interface Lease {
 }
 
 export interface Lease__Output {
-  id?: string
-  createdAt?: _google_protobuf_Timestamp__Output
-  labels?: {[key: string]: string}
+  id: string
+  createdAt: _google_protobuf_Timestamp__Output | null
+  labels: {[key: string]: string}
 }

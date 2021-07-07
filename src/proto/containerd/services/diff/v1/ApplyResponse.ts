@@ -10,5 +10,5 @@ export interface ApplyResponse {
 }
 
 export interface ApplyResponse__Output {
-  applied?: _containerd_types_Descriptor__Output
+  applied: _containerd_types_Descriptor__Output | null
 }

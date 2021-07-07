@@ -5,5 +5,5 @@ export interface AbortRequest {
 }
 
 export interface AbortRequest__Output {
-  ref?: string
+  ref: string
 }

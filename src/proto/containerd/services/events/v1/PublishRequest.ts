@@ -11,6 +11,6 @@ export interface PublishRequest {
 }
 
 export interface PublishRequest__Output {
-  topic?: string
-  event?: _google_protobuf_Any__Output
+  topic: string
+  event: _google_protobuf_Any__Output | null
 }

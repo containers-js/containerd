@@ -5,5 +5,5 @@ export interface ListContainersRequest {
 }
 
 export interface ListContainersRequest__Output {
-  filters?: string[]
+  filters: string[]
 }

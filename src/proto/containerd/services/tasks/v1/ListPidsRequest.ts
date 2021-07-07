@@ -5,5 +5,5 @@ export interface ListPidsRequest {
 }
 
 export interface ListPidsRequest__Output {
-  containerId?: string
+  containerId: string
 }

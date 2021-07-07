@@ -20,11 +20,11 @@ export interface Plugin {
 }
 
 export interface Plugin__Output {
-  type?: string
-  id?: string
-  requires?: string[]
-  platforms?: _containerd_types_Platform__Output[]
-  exports?: {[key: string]: string}
-  capabilities?: string[]
-  initErr?: _google_rpc_Status__Output
+  type: string
+  id: string
+  requires: string[]
+  platforms: _containerd_types_Platform__Output[]
+  exports: {[key: string]: string}
+  capabilities: string[]
+  initErr: _google_rpc_Status__Output | null
 }

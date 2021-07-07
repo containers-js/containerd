@@ -25,12 +25,12 @@ export interface CreateTaskRequest {
 }
 
 export interface CreateTaskRequest__Output {
-  containerId?: string
-  rootfs?: _containerd_types_Mount__Output[]
-  stdin?: string
-  stdout?: string
-  stderr?: string
-  terminal?: boolean
-  checkpoint?: _containerd_types_Descriptor__Output
-  options?: _google_protobuf_Any__Output
+  containerId: string
+  rootfs: _containerd_types_Mount__Output[]
+  stdin: string
+  stdout: string
+  stderr: string
+  terminal: boolean
+  checkpoint: _containerd_types_Descriptor__Output | null
+  options: _google_protobuf_Any__Output | null
 }

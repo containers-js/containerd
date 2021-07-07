@@ -10,5 +10,5 @@ export interface ListResourcesResponse {
 }
 
 export interface ListResourcesResponse__Output {
-  resources?: _containerd_services_leases_v1_Resource__Output[]
+  resources: _containerd_services_leases_v1_Resource__Output[]
 }

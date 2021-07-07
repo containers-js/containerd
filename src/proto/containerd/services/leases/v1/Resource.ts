@@ -6,6 +6,6 @@ export interface Resource {
 }
 
 export interface Resource__Output {
-  id?: string
-  type?: string
+  id: string
+  type: string
 }

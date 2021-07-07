@@ -12,7 +12,7 @@ export interface EnumValueOptions {
 }
 
 export interface EnumValueOptions__Output {
-  deprecated?: boolean
-  uninterpretedOption?: _google_protobuf_UninterpretedOption__Output[]
-  '.gogoproto.enumvalueCustomname'?: string
+  deprecated: boolean
+  uninterpretedOption: _google_protobuf_UninterpretedOption__Output[]
+  '.gogoproto.enumvalueCustomname': string
 }

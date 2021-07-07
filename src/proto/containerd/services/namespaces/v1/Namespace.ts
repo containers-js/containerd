@@ -6,6 +6,6 @@ export interface Namespace {
 }
 
 export interface Namespace__Output {
-  name?: string
-  labels?: {[key: string]: string}
+  name: string
+  labels: {[key: string]: string}
 }

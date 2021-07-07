@@ -6,6 +6,6 @@ export interface UsageRequest {
 }
 
 export interface UsageRequest__Output {
-  snapshotter?: string
-  key?: string
+  snapshotter: string
+  key: string
 }

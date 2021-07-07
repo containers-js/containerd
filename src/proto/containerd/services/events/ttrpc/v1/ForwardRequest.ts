@@ -10,5 +10,5 @@ export interface ForwardRequest {
 }
 
 export interface ForwardRequest__Output {
-  envelope?: _containerd_services_events_ttrpc_v1_Envelope__Output
+  envelope: _containerd_services_events_ttrpc_v1_Envelope__Output | null
 }

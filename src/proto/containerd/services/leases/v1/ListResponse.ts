@@ -10,5 +10,5 @@ export interface ListResponse {
 }
 
 export interface ListResponse__Output {
-  leases?: _containerd_services_leases_v1_Lease__Output[]
+  leases: _containerd_services_leases_v1_Lease__Output[]
 }

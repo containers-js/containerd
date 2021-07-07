@@ -6,6 +6,6 @@ export interface GetRequest {
 }
 
 export interface GetRequest__Output {
-  containerId?: string
-  execId?: string
+  containerId: string
+  execId: string
 }

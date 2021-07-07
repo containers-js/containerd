@@ -9,11 +9,11 @@ export interface _google_protobuf_SourceCodeInfo_Location {
 }
 
 export interface _google_protobuf_SourceCodeInfo_Location__Output {
-  path?: number[]
-  span?: number[]
-  leadingComments?: string
-  trailingComments?: string
-  leadingDetachedComments?: string[]
+  path: number[]
+  span: number[]
+  leadingComments: string
+  trailingComments: string
+  leadingDetachedComments: string[]
 }
 
 export interface SourceCodeInfo {
@@ -21,5 +21,5 @@ export interface SourceCodeInfo {
 }
 
 export interface SourceCodeInfo__Output {
-  location?: _google_protobuf_SourceCodeInfo_Location__Output[]
+  location: _google_protobuf_SourceCodeInfo_Location__Output[]
 }

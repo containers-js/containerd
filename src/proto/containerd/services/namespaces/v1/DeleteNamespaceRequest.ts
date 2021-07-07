@@ -5,5 +5,5 @@ export interface DeleteNamespaceRequest {
 }
 
 export interface DeleteNamespaceRequest__Output {
-  name?: string
+  name: string
 }

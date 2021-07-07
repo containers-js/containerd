@@ -8,8 +8,8 @@ export interface ViewSnapshotRequest {
 }
 
 export interface ViewSnapshotRequest__Output {
-  snapshotter?: string
-  key?: string
-  parent?: string
-  labels?: {[key: string]: string}
+  snapshotter: string
+  key: string
+  parent: string
+  labels: {[key: string]: string}
 }

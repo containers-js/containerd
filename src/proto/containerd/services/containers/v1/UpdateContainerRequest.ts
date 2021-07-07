@@ -15,6 +15,6 @@ export interface UpdateContainerRequest {
 }
 
 export interface UpdateContainerRequest__Output {
-  container?: _containerd_services_containers_v1_Container__Output
-  updateMask?: _google_protobuf_FieldMask__Output
+  container: _containerd_services_containers_v1_Container__Output | null
+  updateMask: _google_protobuf_FieldMask__Output | null
 }

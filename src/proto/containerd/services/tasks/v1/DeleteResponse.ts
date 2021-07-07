@@ -13,8 +13,8 @@ export interface DeleteResponse {
 }
 
 export interface DeleteResponse__Output {
-  id?: string
-  pid?: number
-  exitStatus?: number
-  exitedAt?: _google_protobuf_Timestamp__Output
+  id: string
+  pid: number
+  exitStatus: number
+  exitedAt: _google_protobuf_Timestamp__Output | null
 }

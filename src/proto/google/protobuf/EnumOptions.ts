@@ -17,12 +17,12 @@ export interface EnumOptions {
 }
 
 export interface EnumOptions__Output {
-  allowAlias?: boolean
-  deprecated?: boolean
-  uninterpretedOption?: _google_protobuf_UninterpretedOption__Output[]
-  '.gogoproto.goprotoEnumPrefix'?: boolean
-  '.gogoproto.goprotoEnumStringer'?: boolean
-  '.gogoproto.enumStringer'?: boolean
-  '.gogoproto.enumCustomname'?: string
-  '.gogoproto.enumdecl'?: boolean
+  allowAlias: boolean
+  deprecated: boolean
+  uninterpretedOption: _google_protobuf_UninterpretedOption__Output[]
+  '.gogoproto.goprotoEnumPrefix': boolean
+  '.gogoproto.goprotoEnumStringer': boolean
+  '.gogoproto.enumStringer': boolean
+  '.gogoproto.enumCustomname': string
+  '.gogoproto.enumdecl': boolean
 }

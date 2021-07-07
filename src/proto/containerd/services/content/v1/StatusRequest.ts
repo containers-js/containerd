@@ -5,5 +5,5 @@ export interface StatusRequest {
 }
 
 export interface StatusRequest__Output {
-  ref?: string
+  ref: string
 }

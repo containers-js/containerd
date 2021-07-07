@@ -5,5 +5,5 @@ export interface ListResourcesRequest {
 }
 
 export interface ListResourcesRequest__Output {
-  id?: string
+  id: string
 }

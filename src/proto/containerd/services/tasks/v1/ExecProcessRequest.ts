@@ -16,11 +16,11 @@ export interface ExecProcessRequest {
 }
 
 export interface ExecProcessRequest__Output {
-  containerId?: string
-  stdin?: string
-  stdout?: string
-  stderr?: string
-  terminal?: boolean
-  spec?: _google_protobuf_Any__Output
-  execId?: string
+  containerId: string
+  stdin: string
+  stdout: string
+  stderr: string
+  terminal: boolean
+  spec: _google_protobuf_Any__Output | null
+  execId: string
 }

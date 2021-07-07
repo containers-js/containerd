@@ -11,6 +11,6 @@ export interface ProcessInfo {
 }
 
 export interface ProcessInfo__Output {
-  pid?: number
-  info?: _google_protobuf_Any__Output
+  pid: number
+  info: _google_protobuf_Any__Output | null
 }

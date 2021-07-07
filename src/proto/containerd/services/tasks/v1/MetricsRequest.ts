@@ -5,5 +5,5 @@ export interface MetricsRequest {
 }
 
 export interface MetricsRequest__Output {
-  filters?: string[]
+  filters: string[]
 }

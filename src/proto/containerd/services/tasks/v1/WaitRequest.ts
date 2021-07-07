@@ -6,6 +6,6 @@ export interface WaitRequest {
 }
 
 export interface WaitRequest__Output {
-  containerId?: string
-  execId?: string
+  containerId: string
+  execId: string
 }

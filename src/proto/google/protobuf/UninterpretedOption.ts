@@ -8,8 +8,8 @@ export interface _google_protobuf_UninterpretedOption_NamePart {
 }
 
 export interface _google_protobuf_UninterpretedOption_NamePart__Output {
-  namePart?: string
-  isExtension?: boolean
+  namePart: string
+  isExtension: boolean
 }
 
 export interface UninterpretedOption {
@@ -23,11 +23,11 @@ export interface UninterpretedOption {
 }
 
 export interface UninterpretedOption__Output {
-  name?: _google_protobuf_UninterpretedOption_NamePart__Output[]
-  identifierValue?: string
-  positiveIntValue?: Long
-  negativeIntValue?: Long
-  doubleValue?: number
-  stringValue?: Buffer
-  aggregateValue?: string
+  name: _google_protobuf_UninterpretedOption_NamePart__Output[]
+  identifierValue: string
+  positiveIntValue: Long
+  negativeIntValue: Long
+  doubleValue: number
+  stringValue: Buffer
+  aggregateValue: string
 }

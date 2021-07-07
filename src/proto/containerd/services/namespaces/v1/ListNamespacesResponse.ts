@@ -10,5 +10,5 @@ export interface ListNamespacesResponse {
 }
 
 export interface ListNamespacesResponse__Output {
-  namespaces?: _containerd_services_namespaces_v1_Namespace__Output[]
+  namespaces: _containerd_services_namespaces_v1_Namespace__Output[]
 }

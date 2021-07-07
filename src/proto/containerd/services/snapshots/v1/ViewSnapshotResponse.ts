@@ -10,5 +10,5 @@ export interface ViewSnapshotResponse {
 }
 
 export interface ViewSnapshotResponse__Output {
-  mounts?: _containerd_types_Mount__Output[]
+  mounts: _containerd_types_Mount__Output[]
 }

@@ -10,5 +10,5 @@ export interface CreateResponse {
 }
 
 export interface CreateResponse__Output {
-  lease?: _containerd_services_leases_v1_Lease__Output
+  lease: _containerd_services_leases_v1_Lease__Output | null
 }

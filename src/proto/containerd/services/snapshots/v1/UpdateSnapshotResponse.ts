@@ -10,5 +10,5 @@ export interface UpdateSnapshotResponse {
 }
 
 export interface UpdateSnapshotResponse__Output {
-  info?: _containerd_services_snapshots_v1_Info__Output
+  info: _containerd_services_snapshots_v1_Info__Output | null
 }

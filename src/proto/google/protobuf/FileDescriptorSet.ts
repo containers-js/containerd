@@ -10,5 +10,5 @@ export interface FileDescriptorSet {
 }
 
 export interface FileDescriptorSet__Output {
-  file?: _google_protobuf_FileDescriptorProto__Output[]
+  file: _google_protobuf_FileDescriptorProto__Output[]
 }

@@ -6,6 +6,6 @@ export interface MountsRequest {
 }
 
 export interface MountsRequest__Output {
-  snapshotter?: string
-  key?: string
+  snapshotter: string
+  key: string
 }

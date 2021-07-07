@@ -8,6 +8,6 @@ export interface UsageResponse {
 }
 
 export interface UsageResponse__Output {
-  size?: Long
-  inodes?: Long
+  size: Long
+  inodes: Long
 }

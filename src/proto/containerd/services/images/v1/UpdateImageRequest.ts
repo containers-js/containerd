@@ -15,6 +15,6 @@ export interface UpdateImageRequest {
 }
 
 export interface UpdateImageRequest__Output {
-  image?: _containerd_services_images_v1_Image__Output
-  updateMask?: _google_protobuf_FieldMask__Output
+  image: _containerd_services_images_v1_Image__Output | null
+  updateMask: _google_protobuf_FieldMask__Output | null
 }

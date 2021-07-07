@@ -10,5 +10,5 @@ export interface ListImagesResponse {
 }
 
 export interface ListImagesResponse__Output {
-  images?: _containerd_services_images_v1_Image__Output[]
+  images: _containerd_services_images_v1_Image__Output[]
 }

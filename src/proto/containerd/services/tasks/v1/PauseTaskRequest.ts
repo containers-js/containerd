@@ -5,5 +5,5 @@ export interface PauseTaskRequest {
 }
 
 export interface PauseTaskRequest__Output {
-  containerId?: string
+  containerId: string
 }

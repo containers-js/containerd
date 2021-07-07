@@ -10,5 +10,5 @@ export interface ListStatusesResponse {
 }
 
 export interface ListStatusesResponse__Output {
-  statuses?: _containerd_services_content_v1_Status__Output[]
+  statuses: _containerd_services_content_v1_Status__Output[]
 }

@@ -5,5 +5,5 @@ export interface DeleteContainerRequest {
 }
 
 export interface DeleteContainerRequest__Output {
-  id?: string
+  id: string
 }

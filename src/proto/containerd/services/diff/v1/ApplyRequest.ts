@@ -20,7 +20,7 @@ export interface ApplyRequest {
 }
 
 export interface ApplyRequest__Output {
-  diff?: _containerd_types_Descriptor__Output
-  mounts?: _containerd_types_Mount__Output[]
-  payloads?: {[key: string]: _google_protobuf_Any__Output}
+  diff: _containerd_types_Descriptor__Output | null
+  mounts: _containerd_types_Mount__Output[]
+  payloads: {[key: string]: _google_protobuf_Any__Output}
 }

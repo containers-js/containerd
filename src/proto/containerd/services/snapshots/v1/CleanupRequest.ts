@@ -5,5 +5,5 @@ export interface CleanupRequest {
 }
 
 export interface CleanupRequest__Output {
-  snapshotter?: string
+  snapshotter: string
 }

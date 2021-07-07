@@ -10,5 +10,5 @@ export interface ListContainerMessage {
 }
 
 export interface ListContainerMessage__Output {
-  container?: _containerd_services_containers_v1_Container__Output
+  container: _containerd_services_containers_v1_Container__Output | null
 }

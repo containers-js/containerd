@@ -10,5 +10,5 @@ export interface StatusResponse {
 }
 
 export interface StatusResponse__Output {
-  status?: _containerd_services_content_v1_Status__Output
+  status: _containerd_services_content_v1_Status__Output | null
 }

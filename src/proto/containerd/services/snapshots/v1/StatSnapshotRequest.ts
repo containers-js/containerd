@@ -6,6 +6,6 @@ export interface StatSnapshotRequest {
 }
 
 export interface StatSnapshotRequest__Output {
-  snapshotter?: string
-  key?: string
+  snapshotter: string
+  key: string
 }

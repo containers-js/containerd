@@ -5,5 +5,5 @@ export interface GetNamespaceRequest {
 }
 
 export interface GetNamespaceRequest__Output {
-  name?: string
+  name: string
 }

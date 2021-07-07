@@ -6,6 +6,6 @@ export interface VersionResponse {
 }
 
 export interface VersionResponse__Output {
-  version?: string
-  revision?: string
+  version: string
+  revision: string
 }

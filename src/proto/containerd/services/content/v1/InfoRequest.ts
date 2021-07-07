@@ -5,5 +5,5 @@ export interface InfoRequest {
 }
 
 export interface InfoRequest__Output {
-  digest?: string
+  digest: string
 }
