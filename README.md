@@ -19,7 +19,8 @@ $ pnpm add @containers-js/containerd
 ```typescript
 import {Client} from '@containers-js/containerd'
 
-const client = new Client()
+const client = new Client('unix:/run/containerd/containerd.sock', 'example-namespace')
+const res = await client.containers.list({})
 ```
 
 ## License

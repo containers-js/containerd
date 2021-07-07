@@ -1,3 +1,4 @@
+import type {} from '@grpc/grpc-js'
 import * as grpc from '@grpc/grpc-js'
 import * as protoLoader from '@grpc/proto-loader'
 import path from 'path'
@@ -20,36 +21,35 @@ type UniaryMethodsOf<T extends grpc.Client> = {
     : never
 }[keyof T]
 
+type ClientConstructor<PackageDefinition, Client extends grpc.Client> = (
+  packageDefinition: PackageDefinition,
+) => new (address: string, credentials: grpc.ChannelCredentials, options?: grpc.ClientOptions | undefined) => Client
+
 export abstract class BaseService<PackageDefinition, Client extends grpc.Client> {
-  #packageDefinition: PackageDefinition | null = null
+  #address: string
+  #namespace: string
   #protoPath: string
 
+  #packageDefinition: PackageDefinition | null = null
+  #getClientConstructor: ClientConstructor<PackageDefinition, Client>
   #client: Client | null = null
-  protected address: string
-  protected namespace: string
-  protected credentials = grpc.credentials.createInsecure()
-  protected clientOptions: grpc.ClientOptions = {
+  #clientOptions: grpc.ClientOptions = {
     callInvocationTransformer: (callProperties) => {
-      callProperties.metadata.set('containerd-namespace', this.namespace)
+      callProperties.metadata.set('containerd-namespace', this.#namespace)
       return callProperties
     },
   }
 
-  constructor(protoPath: string, address: string, namespace: string) {
+  constructor(
+    address: string,
+    namespace: string,
+    protoPath: string,
+    getClientConstructor: ClientConstructor<PackageDefinition, Client>,
+  ) {
+    this.#address = address
+    this.#namespace = namespace
     this.#protoPath = protoPath
-    this.address = address
-    this.namespace = namespace
-  }
-
-  protected async packageDefinition(): Promise<PackageDefinition> {
-    if (this.#packageDefinition) return this.#packageDefinition as PackageDefinition
-    const proto = await protoLoader.load(this.#protoPath, {
-      includeDirs: [path.join(__dirname, '../../proto')],
-      defaults: true,
-    })
-    const packageDefinition = grpc.loadPackageDefinition(proto) as unknown as PackageDefinition
-    this.#packageDefinition = packageDefinition
-    return packageDefinition
+    this.#getClientConstructor = getClientConstructor
   }
 
   protected async callUnary<Method extends UniaryMethodsOf<Client>, Resp = CallbackReturnType<Client[Method]>>(
@@ -67,13 +67,20 @@ export abstract class BaseService<PackageDefinition, Client extends grpc.Client>
 
   protected async getClient(): Promise<Client> {
     if (this.#client) return this.#client
-    const Client = this.getClientConstructor(await this.packageDefinition())
-    const client = new Client(this.address, this.credentials, this.clientOptions)
+
+    let packageDefinition = this.#packageDefinition
+    if (!packageDefinition) {
+      const proto = await protoLoader.load(this.#protoPath, {
+        includeDirs: [path.join(__dirname, '../../proto')],
+        defaults: true,
+      })
+      packageDefinition = grpc.loadPackageDefinition(proto) as unknown as PackageDefinition
+      this.#packageDefinition = packageDefinition
+    }
+
+    const Client = this.#getClientConstructor(packageDefinition)
+    const client = new Client(this.#address, grpc.credentials.createInsecure(), this.#clientOptions)
     this.#client = client
     return client
   }
-
-  protected abstract getClientConstructor(
-    packageDefinition: PackageDefinition,
-  ): new (address: string, credentials: grpc.ChannelCredentials, options?: grpc.ClientOptions | undefined) => Client
 }

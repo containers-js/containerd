@@ -1,3 +1,4 @@
+import type {} from '@grpc/grpc-js'
 import path from 'path'
 import {ContainersClient} from '../proto/containerd/services/containers/v1/Containers'
 import {CreateContainerRequest} from '../proto/containerd/services/containers/v1/CreateContainerRequest'
@@ -8,12 +9,17 @@ import {UpdateContainerRequest} from '../proto/containerd/services/containers/v1
 import {ProtoGrpcType} from '../proto/containers'
 import {BaseService} from './BaseService'
 
+function getClientConstructor(proto: ProtoGrpcType) {
+  return proto.containerd.services.containers.v1.Containers
+}
+
 export class ContainersService extends BaseService<ProtoGrpcType, ContainersClient> {
   constructor(address: string, namespace: string) {
     super(
-      path.join(__dirname, '../../proto/github.com/containerd/containerd/api/services/containers/v1/containers.proto'),
       address,
       namespace,
+      path.join(__dirname, '../../proto/github.com/containerd/containerd/api/services/containers/v1/containers.proto'),
+      getClientConstructor,
     )
   }
 
@@ -40,9 +46,5 @@ export class ContainersService extends BaseService<ProtoGrpcType, ContainersClie
 
   async update(request: UpdateContainerRequest) {
     return this.callUnary('update', request)
-  }
-
-  protected getClientConstructor(proto: ProtoGrpcType) {
-    return proto.containerd.services.containers.v1.Containers
   }
 }

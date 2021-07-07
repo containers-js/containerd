@@ -1,3 +1,4 @@
+import type {} from '@grpc/grpc-js'
 import path from 'path'
 import {CreateNamespaceRequest} from '../proto/containerd/services/namespaces/v1/CreateNamespaceRequest'
 import {DeleteNamespaceRequest} from '../proto/containerd/services/namespaces/v1/DeleteNamespaceRequest'
@@ -8,12 +9,17 @@ import {UpdateNamespaceRequest} from '../proto/containerd/services/namespaces/v1
 import {ProtoGrpcType} from '../proto/namespace'
 import {BaseService} from './BaseService'
 
+function getClientConstructor(proto: ProtoGrpcType) {
+  return proto.containerd.services.namespaces.v1.Namespaces
+}
+
 export class NamespacesService extends BaseService<ProtoGrpcType, NamespacesClient> {
   constructor(address: string, namespace: string) {
     super(
-      path.join(__dirname, '../../proto/github.com/containerd/containerd/api/services/namespaces/v1/namespaces.proto'),
       address,
       namespace,
+      path.join(__dirname, '../../proto/github.com/containerd/containerd/api/services/namespaces/v1/namespaces.proto'),
+      getClientConstructor,
     )
   }
 
@@ -35,9 +41,5 @@ export class NamespacesService extends BaseService<ProtoGrpcType, NamespacesClie
 
   async update(request: UpdateNamespaceRequest) {
     return await this.callUnary('update', request)
-  }
-
-  protected getClientConstructor(proto: ProtoGrpcType) {
-    return proto.containerd.services.namespaces.v1.Namespaces
   }
 }

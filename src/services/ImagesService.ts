@@ -1,3 +1,4 @@
+import type {} from '@grpc/grpc-js'
 import path from 'path'
 import {CreateImageRequest} from '../proto/containerd/services/images/v1/CreateImageRequest'
 import {DeleteImageRequest} from '../proto/containerd/services/images/v1/DeleteImageRequest'
@@ -8,12 +9,17 @@ import {UpdateImageRequest} from '../proto/containerd/services/images/v1/UpdateI
 import {ProtoGrpcType} from '../proto/images'
 import {BaseService} from './BaseService'
 
+function getClientConstructor(proto: ProtoGrpcType) {
+  return proto.containerd.services.images.v1.Images
+}
+
 export class ImagesService extends BaseService<ProtoGrpcType, ImagesClient> {
   constructor(address: string, namespace: string) {
     super(
-      path.join(__dirname, '../../proto/github.com/containerd/containerd/api/services/images/v1/images.proto'),
       address,
       namespace,
+      path.join(__dirname, '../../proto/github.com/containerd/containerd/api/services/images/v1/images.proto'),
+      getClientConstructor,
     )
   }
 
@@ -35,9 +41,5 @@ export class ImagesService extends BaseService<ProtoGrpcType, ImagesClient> {
 
   async update(request: UpdateImageRequest) {
     return await this.callUnary('update', request)
-  }
-
-  protected getClientConstructor(proto: ProtoGrpcType) {
-    return proto.containerd.services.images.v1.Images
   }
 }

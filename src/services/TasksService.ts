@@ -1,3 +1,4 @@
+import type {} from '@grpc/grpc-js'
 import path from 'path'
 import {CheckpointTaskRequest} from '../proto/containerd/services/tasks/v1/CheckpointTaskRequest'
 import {CloseIORequest} from '../proto/containerd/services/tasks/v1/CloseIORequest'
@@ -20,12 +21,17 @@ import {WaitRequest} from '../proto/containerd/services/tasks/v1/WaitRequest'
 import {ProtoGrpcType} from '../proto/tasks'
 import {BaseService} from './BaseService'
 
+function getClientConstructor(proto: ProtoGrpcType) {
+  return proto.containerd.services.tasks.v1.Tasks
+}
+
 export class TasksService extends BaseService<ProtoGrpcType, TasksClient> {
   constructor(address: string, namespace: string) {
     super(
-      path.join(__dirname, '../../proto/github.com/containerd/containerd/api/services/tasks/v1/tasks.proto'),
       address,
       namespace,
+      path.join(__dirname, '../../proto/github.com/containerd/containerd/api/services/tasks/v1/tasks.proto'),
+      getClientConstructor,
     )
   }
 
@@ -95,9 +101,5 @@ export class TasksService extends BaseService<ProtoGrpcType, TasksClient> {
 
   async wait(request: WaitRequest) {
     return this.callUnary('wait', request)
-  }
-
-  protected getClientConstructor(proto: ProtoGrpcType) {
-    return proto.containerd.services.tasks.v1.Tasks
   }
 }

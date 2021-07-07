@@ -1,3 +1,4 @@
+import type {} from '@grpc/grpc-js'
 import path from 'path'
 import {ForwardRequest} from '../proto/containerd/services/events/ttrpc/v1/ForwardRequest'
 import {EventsClient} from '../proto/containerd/services/events/v1/Events'
@@ -6,12 +7,17 @@ import {SubscribeRequest} from '../proto/containerd/services/events/v1/Subscribe
 import {ProtoGrpcType} from '../proto/events'
 import {BaseService} from './BaseService'
 
+function getClientConstructor(proto: ProtoGrpcType) {
+  return proto.containerd.services.events.v1.Events
+}
+
 export class EventsService extends BaseService<ProtoGrpcType, EventsClient> {
   constructor(address: string, namespace: string) {
     super(
-      path.join(__dirname, '../../proto/github.com/containerd/containerd/api/services/events/v1/events.proto'),
       address,
       namespace,
+      path.join(__dirname, '../../proto/github.com/containerd/containerd/api/services/events/v1/events.proto'),
+      getClientConstructor,
     )
   }
 
@@ -26,9 +32,5 @@ export class EventsService extends BaseService<ProtoGrpcType, EventsClient> {
   async subscribe(request: SubscribeRequest) {
     const client = await this.getClient()
     return client.subscribe(request)
-  }
-
-  protected getClientConstructor(proto: ProtoGrpcType) {
-    return proto.containerd.services.events.v1.Events
   }
 }

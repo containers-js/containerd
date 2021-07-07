@@ -1,3 +1,4 @@
+import type {} from '@grpc/grpc-js'
 import path from 'path'
 import {AbortRequest} from '../proto/containerd/services/content/v1/AbortRequest'
 import {ContentClient} from '../proto/containerd/services/content/v1/Content'
@@ -11,12 +12,17 @@ import {ListRequest} from '../proto/containerd/services/leases/v1/ListRequest'
 import {ProtoGrpcType} from '../proto/content'
 import {BaseService} from './BaseService'
 
+function getClientConstructor(proto: ProtoGrpcType) {
+  return proto.containerd.services.content.v1.Content
+}
+
 export class ContentService extends BaseService<ProtoGrpcType, ContentClient> {
   constructor(address: string, namespace: string) {
     super(
-      path.join(__dirname, '../../proto/github.com/containerd/containerd/api/services/content/v1/content.proto'),
       address,
       namespace,
+      path.join(__dirname, '../../proto/github.com/containerd/containerd/api/services/content/v1/content.proto'),
+      getClientConstructor,
     )
   }
 
@@ -57,9 +63,5 @@ export class ContentService extends BaseService<ProtoGrpcType, ContentClient> {
   async write() {
     const client = await this.getClient()
     return client.write()
-  }
-
-  protected getClientConstructor(proto: ProtoGrpcType) {
-    return proto.containerd.services.content.v1.Content
   }
 }

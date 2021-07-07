@@ -1,3 +1,4 @@
+import type {} from '@grpc/grpc-js'
 import path from 'path'
 import {CleanupRequest} from '../proto/containerd/services/snapshots/v1/CleanupRequest'
 import {CommitSnapshotRequest} from '../proto/containerd/services/snapshots/v1/CommitSnapshotRequest'
@@ -13,12 +14,17 @@ import {ViewSnapshotRequest} from '../proto/containerd/services/snapshots/v1/Vie
 import {ProtoGrpcType} from '../proto/snapshots'
 import {BaseService} from './BaseService'
 
+function getClientConstructor(proto: ProtoGrpcType) {
+  return proto.containerd.services.snapshots.v1.Snapshots
+}
+
 export class SnapshotsService extends BaseService<ProtoGrpcType, SnapshotsClient> {
   constructor(address: string, namespace: string) {
     super(
-      path.join(__dirname, '../../proto/github.com/containerd/containerd/api/services/snapshots/v1/snapshots.proto'),
       address,
       namespace,
+      path.join(__dirname, '../../proto/github.com/containerd/containerd/api/services/snapshots/v1/snapshots.proto'),
+      getClientConstructor,
     )
   }
 
@@ -61,9 +67,5 @@ export class SnapshotsService extends BaseService<ProtoGrpcType, SnapshotsClient
 
   async view(request: ViewSnapshotRequest) {
     return this.callUnary('view', request)
-  }
-
-  protected getClientConstructor(proto: ProtoGrpcType) {
-    return proto.containerd.services.snapshots.v1.Snapshots
   }
 }
