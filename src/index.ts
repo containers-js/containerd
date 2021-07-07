@@ -1,12 +1,12 @@
-import {Client} from './Client'
-
-async function run() {
-  const client = new Client('unix:/run/containerd/containerd.sock', 'example')
-  const res = await client.containers.list({})
-  console.log(res)
-}
-
-run().catch((error) => {
-  console.error(error.stack)
-  process.exit(1)
-})
+export * from './Client'
+export * from './services/ContainersService'
+export * from './services/ContentService'
+export * from './services/DiffService'
+export * from './services/EventsService'
+export * from './services/ImagesService'
+export * from './services/IntrospectionService'
+export * from './services/LeasesService'
+export * from './services/NamespacesService'
+export * from './services/SnapshotsService'
+export * from './services/TasksService'
+export * from './services/VersionService'

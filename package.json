@@ -15,42 +15,30 @@
     "email": "jacobwgillespie@gmail.com"
   },
   "license": "MIT",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
+  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "tsc",
     "clean": "rm -rf dist",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
     "generate": "./support/generate.sh",
     "type-check": "tsc --noEmit",
-    "watch": "rollup -c --watch"
+    "watch": "tsc --watch"
   },
   "dependencies": {
     "@grpc/grpc-js": "^1.3.4",
-    "@grpc/proto-loader": "^0.6.4",
-    "execa": "^5.1.1",
-    "tempy": "^1.0.1",
-    "tslib": "^2.3.0"
+    "@grpc/proto-loader": "^0.6.4"
   },
   "devDependencies": {
     "@tsconfig/node14": "^1.0.1",
     "@types/node": "^14.17.0",
-    "@types/prettier": "^2.3.0",
-    "esbuild-register": "^2.6.0",
-    "fast-case": "^1.6.0",
-    "globby": "^11.0.4",
-    "node-dev": "^7.0.0",
     "prettier": "^2.3.1",
     "prettier-plugin-organize-imports": "^2.1.0",
     "prettier-plugin-pkg": "^0.9.0",
-    "rollup": "^2.52.2",
-    "rollup-plugin-dts": "^3.0.2",
-    "rollup-plugin-typescript2": "^0.30.0",
     "ts-node": "^10.0.0",
     "typedoc": "^0.21.0",
     "typescript": "^4.3.4"

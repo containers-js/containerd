@@ -4,6 +4,8 @@
     "rootDir": "./src",
     "outDir": "./dist",
 
+    "declaration": true,
+
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
